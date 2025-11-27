@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, веб-сторінка, лабораторна робота, Мойса Анастасія, ІТ">
+    <meta name="description" content="Лабораторна робота №5. JavaScript. «Події. Регулярні вирази»">
+    <title>Мойса А. С., ІО-36</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="validationForm">
+            <div class="form-group">
+                <label for="fullName">ПІБ</label>
+                <input type="text" id="fullName" name="fullName" placeholder="ТТТТТТ Т.Т.">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="text" id="phone" name="phone" placeholder="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="idCard">ID-card</label>
+                <input type="text" id="idCard" name="idCard" placeholder="ТТ №ЧЧЧЧЧЧ">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthDate">Дата народження:</label>
+                <input type="text" id="birthDate" name="birthDate" placeholder="ЧЧ.ЧЧ.ЧЧЧЧ">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email" placeholder="тттттт@ттттт.com">
+                <span class="error-message"></span>
+            </div>
+            
+            <div class="form-buttons">
+                <button type="submit">Перевірити дані</button>
+                <button type="button" id="clearButton">Очистити форму</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <div class="color-picker-container">
+            <label for="colorPicker">Вибір кольору клітинки: </label>
+            <input type="color" id="colorPicker" value="#3498db">
+        </div>
+        
+        <table id="interactiveTable">
+        </table>
+    </div>
+    
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Введені дані</h2>
+            <div id="resultData"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
